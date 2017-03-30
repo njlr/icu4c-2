@@ -2,7 +2,10 @@ cxx_library(
   name = 'common',
   header_namespace = '',
   exported_headers = subdir_glob([
-    ('source/common', '**/*.h'),
+    ('source/common', 'unicode/**/*.h'),
+  ]),
+  headers = subdir_glob([
+    ('source/common', '*.h'),
   ]),
   srcs = glob([
     'source/common/**/*.cpp',
